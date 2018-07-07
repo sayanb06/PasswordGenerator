@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 	
-	public final static String EXAMPLE_PWORD = "haS.6A";
+	public static String EXAMPLE_PWORD = "haS.6A";
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -28,6 +28,8 @@ public class Main {
 			System.out.println(password);
 		}
 		
+		System.out.println("Enter the example password: ");
+		EXAMPLE_PWORD = input.nextLine();
 		crackExamplePassword();
 	}
 	
@@ -93,8 +95,8 @@ public class Main {
 			//give statistics: elapsed time, passwords tested, number of repititions
 			System.out.print("\r" + 
 							(System.currentTimeMillis() - startTime) / 1000 
-							+ " seconds elapsed and " + passwords.size() + " passwords tested with " + repitions + " repitions"
-							+ "\tCurrently guessing: \"" + generated + "\" while actual is \"" + EXAMPLE_PWORD + "\"");
+							+ "sec. \\\\" + passwords.size() + " passwords \\\\" + repitions + " reps "
+							+ "\\\\Guessing: \"" + generated + "\" while actual is \"" + EXAMPLE_PWORD + "\"");
 			
 			//password has been "cracked"
 			if (generated.equals(EXAMPLE_PWORD)) {
