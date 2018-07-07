@@ -7,7 +7,7 @@ public class Generator {
 	/**
 	 * min number of characters in each password
 	 */
-	public static final int MIN_CHARS = 4;	
+	public static final int MIN_CHARS = 5;	
 	/**
 	 * max number of characters in each password
 	 */
@@ -102,6 +102,7 @@ public class Generator {
 			return new String[] {generateOne()};
 		}
 		
+		//generate one password, many times
 		String[] passwords = new String[numPasswords];
 		for (int index = 0; index < numPasswords; index++) {
 			passwords[index] = generateOne();
